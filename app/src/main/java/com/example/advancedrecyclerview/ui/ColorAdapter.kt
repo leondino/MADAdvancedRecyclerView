@@ -10,10 +10,15 @@ import com.example.advancedrecyclerview.R
 import com.example.advancedrecyclerview.model.ColorItem
 import kotlinx.android.synthetic.main.item_color.view.*
 
-class ColorAdapter(private val colors: List<ColorItem>) : RecyclerView.Adapter<ColorAdapter.ViewHolder>() {
+class ColorAdapter(private val colors: List<ColorItem>, private val onCLick: (ColorItem) -> Unit) : RecyclerView.Adapter<ColorAdapter.ViewHolder>() {
 
     private lateinit var context: Context
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        init {
+            itemView.setOnClickListener {
+                onCLick(colors[adapterPosition])
+            }
+        }
         fun bind(colorItem: ColorItem){
             Glide.with(context).load(colorItem.getImageUrl()).into(itemView.ivColor)
         }

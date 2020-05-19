@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Advanced RecyclerView</string>
     <string name="color_text">A Color</string>
+    <string name="color_snackbar">This color is: %s</string>
 </resources>
