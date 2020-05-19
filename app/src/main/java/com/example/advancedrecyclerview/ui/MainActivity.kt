@@ -1,7 +1,8 @@
-package com.example.advancedrecyclerview
+package com.example.advancedrecyclerview.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.advancedrecyclerview.R
 
 class MainActivity : AppCompatActivity() {
 
